@@ -7,7 +7,7 @@ The CSS template is from: http://www.templatemo.com/tm-488-classic/
 
 To get started with the app, clone the repo
 ```
-$ git clone
+$ git clone https://github.com/jimmy2046/myapp2.git
 ```
 
 and then install the needed gems:
