@@ -1,24 +1,41 @@
-# README
+# Ruby on Rails myapp2 project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Ruby on Rails codes are from https://www.railstutorial.org/
+The CSS template is from: http://www.templatemo.com/tm-488-classic/
 
-Things you may want to cover:
+## Getting started
 
-* Ruby version
+To get started with the app, clone the repo
+```
+$ git clone
+```
 
-* System dependencies
+and then install the needed gems:
 
-* Configuration
+```
+$ bundle install
+```
 
-* Database creation
+Next, migrate the database:
 
-* Database initialization
+```
+$ rails db:migrate
+```
 
-* How to run the test suite
+Finally, run the test suite to verify that everything is working correctly:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+$ rails test
+```
 
-* Deployment instructions
+If the test suite passes, you'll be ready to run the app in a local server:
 
-* ...
+```
+$ rails s -b 0.0.0.0 -p 3000
+```
+
+## Notes
+For this verion, I added this line in the Gemfile to make the test runs properply.
+```
+gem "minitest", "5.10.1"
+```
