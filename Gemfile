@@ -12,6 +12,9 @@ gem 'rails', '~> 5.0.2'
 # Use the minitest ver 5.10.1 for testing stability
 gem "minitest", "5.10.1"
 
+# bcrypt for password digest
+gem 'bcrypt',         '3.1.11'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server

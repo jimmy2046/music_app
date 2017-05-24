@@ -2,6 +2,7 @@
 
 The Ruby on Rails codes are from https://www.railstutorial.org/
 The CSS template is from: http://www.templatemo.com/tm-488-classic/
+My blog is http://rorquest.blogspot.com/
 
 ## Getting started
 
