@@ -15,6 +15,9 @@ gem "minitest", "5.10.1"
 # bcrypt for password digest
 gem 'bcrypt',         '3.1.11'
 
+# gem for controller testing
+gem 'rails-controller-testing'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server

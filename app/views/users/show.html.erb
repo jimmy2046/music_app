@@ -1,4 +1,4 @@
-<% provide(:title, "Home") %>
+<% provide(:title, @user.first_name+" "+@user.last_name) %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,7 +40,7 @@ http://www.templatemo.com/tm-488-classic
                         
                         <div class="collapse navbar-toggleable-sm" id="tmNavbar">
                             <ul class="nav navbar-nav">
-                                <li class="nav-item active"><%= link_to "Home", root_path, class: "nav-link" %></li> 
+                                <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link" %></li> 
                                 <li class="nav-item"><%= link_to "Help", help_path, class: "nav-link" %></li>
                                 <li class="nav-item"><%= link_to "Log in", '#', class: "nav-link" %></li>
                             </ul>
@@ -58,12 +58,15 @@ http://www.templatemo.com/tm-488-classic
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-                        <h2 class="tm-gold-text tm-title">Welcome to the Sample App</h2>
-                        <p class="tm-subtitle">This is the home page for the
-    <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.</p>
                         
-                        <%= link_to "Sign up now!", signup_path, class: "tm-btn text-uppercase" %>                                                
+                        <h1>
+                          <%= gravatar_for @user %>
+                          <%= @user.first_name %> <%= @user.last_name %>
+                        </h1>
+
+                        <p class="tm-subtitle">
+                        <%= @user.first_name %>, <%= @user.last_name %>, <%= @user.email %></p>
+                        
                     </div>
                     <%= link_to image_tag("rails.png", alt: "Rails logo"),
             'http://rubyonrails.org/' %>
