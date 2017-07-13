@@ -1,0 +1,37 @@
+        <footer class="tm-footer">
+            <div class="container-fluid">
+                <div class="row">
+                    
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                        <div class="tm-footer-content-box tm-footer-links-container">
+                        
+                            <h3 class="tm-gold-text tm-title tm-footer-content-box-title">Ruby on Rails Tutorial</h3>
+                            <nav>
+                                <ul class="nav">
+                                    <li>
+                                        <%= link_to("About", about_path, :class => "tm-footer-link") %>
+                                    </li>
+                                    <li>
+                                        <%= link_to("Contact", contact_path, :class => "tm-footer-link") %>
+                                    </li>
+                                    <li>
+                                        <a href="http://news.railstutorial.org/" class="tm-footer-link">News</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>                      
+                    </div>
+
+                    <!-- Add the extra clearfix for only the required viewport 
+                        http://stackoverflow.com/questions/24590222/bootstrap-3-grid-with-different-height-in-each-item-is-it-solvable-using-only
+                    -->
+                    <div class="clearfix hidden-lg-up"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 tm-copyright-col">
+                        <p class="tm-copyright-text">Jimmy Chong 2017</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
