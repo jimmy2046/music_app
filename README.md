@@ -1,8 +1,8 @@
 # Ruby on Rails myapp2 project
 
-The Ruby on Rails codes are from https://www.railstutorial.org/
-The CSS template is from: http://www.templatemo.com/tm-488-classic/
-My blog is http://rorquest.blogspot.com/
+The Ruby on Rails codes are from https://www.railstutorial.org/<br />
+The CSS template is from: http://www.templatemo.com/tm-488-classic/<br />
+My blog is http://rorquest.blogspot.com/<br />
 
 ## Getting started
 
@@ -36,7 +36,7 @@ $ rails s -b 0.0.0.0 -p 3000
 ```
 
 ## Notes
-For this verion, I added this line in the Gemfile to make the test runs properply.
+For this version, I added this line in the Gemfile to make the test runs properly.
 ```
 gem "minitest", "5.10.1"
 ```

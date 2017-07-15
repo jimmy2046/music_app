@@ -39,10 +39,10 @@ h2 { font-size: 2.2rem; }
 }
 
 .tm-header-inner {
-	display: -webkit-flex;
+	display: -webkit-center;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-align-items: center;
+	-webkit-align-items: top;
 	    -ms-flex-align: center;
 	        align-items: center;
 	-webkit-justify-content: space-between;
@@ -429,4 +429,18 @@ p { line-height: 1.9; }
 		margin-left: auto;
 		margin-right: auto;
 	}
+}
+
+.checkbox {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 10;
 }
