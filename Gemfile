@@ -15,6 +15,13 @@ gem "minitest", "5.10.1"
 # bcrypt for password digest
 gem 'bcrypt',         '3.1.11'
 
+# faker for creating sample users for testing
+gem 'faker',          '1.7.3'
+
+# For pagination
+gem 'will_paginate',           '3.1.5'
+gem 'bootstrap-will_paginate', '1.0.0'
+
 # gem for controller testing
 gem 'rails-controller-testing'
 
