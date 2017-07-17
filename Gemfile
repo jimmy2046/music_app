@@ -22,6 +22,9 @@ gem 'faker',          '1.7.3'
 gem 'will_paginate',           '3.1.5'
 gem 'bootstrap-will_paginate', '1.0.0'
 
+# Use Bookstrap
+gem 'bootstrap-sass', '3.3.6'
+
 # gem for controller testing
 gem 'rails-controller-testing'
 
