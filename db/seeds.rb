@@ -9,11 +9,11 @@
 User.create!(first_name:  "Example",
              last_name: "User",
              email: "example@railstutorial.org",
-             password:              "foobar",
-             password_confirmation: "foobar",
+             password:              "secret",
+             password_confirmation: "secret",
              admin: true)
 
-99.times do |n|
+10.times do |n|
   firstName = Faker::Name.first_name
   lastName = Faker::Name.last_name
   email = "example-#{n+1}@railstutorial.org"
@@ -23,4 +23,10 @@ User.create!(first_name:  "Example",
                email: email,
                password:              password,
                password_confirmation: password)
+end
+
+users = User.order(:created_at).take(6)
+50.times do
+  content = Faker::Lorem.sentence(5)
+  users.each { |user| user.microposts.create!(content: content) }
 end

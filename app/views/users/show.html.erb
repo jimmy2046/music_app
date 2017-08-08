@@ -1,32 +1,20 @@
-<% provide(:title, @user.first_name+" "+@user.last_name) %>
-<!DOCTYPE html>
-<html>
-
-    <body>                       
-        <div class="tm-about-img-container">
-            
-        </div>        
-
-        <section class="tm-section">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-                        
-                        <h1>
-                          <%= gravatar_for @user %>
-                          <%= @user.first_name %> <%= @user.last_name %>
-                        </h1>
-
-                        <p class="tm-subtitle">
-                        <%= @user.first_name %>, <%= @user.last_name %>, <%= @user.email %></p>
-                        
-                    </div>
-                    <%= link_to image_tag("rails.png", alt: "Rails logo"),
-            'http://rubyonrails.org/' %>
-                        
-                    </div>
-                </div> 
-        </section>
-        
-</body>
-</html>
+<% provide(:title, @user.first_name + " " + @user.last_name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.first_name %> <%= @user.last_name %>
+      </h1>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <% if @user.microposts.any? %>
+      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
+</div>
