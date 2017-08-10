@@ -17,18 +17,33 @@
     </div>
 </div>
 <% else %>
-  <div class="center jumbotron">
-    <h1>Welcome to the Sample App</h1>
 
-    <h2>
-      This is the home page for the
-      <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-      sample application.
-    </h2>
+    <!-- Header -->
+    <div id="wrapperHeader">    
+        <div id="header">
+            <%= image_tag("head-bg.jpg") %>
+        </div> 
+    </div>
+        
+	<!-- Content -->
+	<div class="content">
+		<div class="container">
+			<!-- Post -->
+			<div class="post">
+				<!-- Heading -->				
+                <h1>Welcome to the myapp2</h1>
+				<hr>
+				<div class="in-content">
+					<p>This is a Ruby on Rails website based on <a href = "https://www.railstutorial.org/book">Michael Hartl's Tutorial</a>.
+                        The production version is hosted by Heroku on: <a href ="https://vast-mesa-46380.herokuapp.com/"> https://vast-mesa-46380.herokuapp.com/</a>. The source code is hosted by Github on: <a href = "https://github.com/jimmy2046/myapp2">https://github.com/jimmy2046/myapp2</a>. The SendGrid mail server is disabled. Therefore, there are no account activation and password reset functions at this moment. </p>
+                    <%= link_to "Sign up now!", signup_path, class: "btn-yellow btn-lg btn-primary" %>
+                    
+				</div>
+            </div>
+			<!-- /post -->
+            
+		</div>
+	</div>
 
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-  </div>
 
-  <%= link_to image_tag("rails.png", alt: "Rails logo"),
-              'http://rubyonrails.org/' %>
 <% end %>
