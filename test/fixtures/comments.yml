@@ -1,0 +1,10 @@
+one:
+  commenter: "Jimmy Chong"
+  body: "Jimmy is typing comment number one."
+  created_at: <%= 10.minutes.ago %>
+  
+michael:
+  commenter: "Michael"
+  body: "Michael's comment body"
+  created_at: <%= 2.days.ago %>
+  

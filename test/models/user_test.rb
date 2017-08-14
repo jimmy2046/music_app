@@ -87,6 +87,14 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.authenticated?('')
   end    
 
+  test "associated microposts should be destroyed" do
+    @user.save
+    @user.microposts.create!(content: "Lorem ipsum")
+    assert_difference 'Micropost.count', -1 do
+      @user.destroy
+    end
+  end    
+    
   test "should follow and unfollow a user" do
     michael = users(:michael)
     archer  = users(:archer)
@@ -115,5 +123,13 @@ class UserTest < ActiveSupport::TestCase
       assert_not michael.feed.include?(post_unfollowed)
     end
   end    
+    
+  test "associated articles should be destroyed" do
+    @user.save
+    @user.articles.create!(title: "Title Test", text: "Text Testing")
+    assert_difference 'Article.count', -1 do
+      @user.destroy
+    end
+  end
     
 end

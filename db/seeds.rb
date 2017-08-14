@@ -31,3 +31,11 @@ following = users[2..50]
 followers = users[3..40]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
+
+# Articles
+users = User.order(:created_at).take(6)
+5.times do
+  title = Faker::Lorem.sentence(1)
+  text = Faker::Lorem.sentence(10)
+  users.each { |user| user.articles.create!(title: title, text: text) }
+end

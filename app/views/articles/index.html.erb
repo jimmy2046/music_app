@@ -1,0 +1,32 @@
+<h1>My Blog</h1>
+ 
+  <%= link_to 'Write a new article', new_article_path, class: "btn-yellow btn-lg btn-primary" %>
+<%= will_paginate @articles %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th>Name</th>      
+    <th colspan="3"></th>      
+  </tr>
+ 
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= article.user.first_name + " " + article.user.last_name %></td>        
+      <td><%= link_to 'Show', article_path(article) %></td>
+
+    <% if logged_in? %>        
+      <% if article.user_id == current_user.id %>        
+      <td><%= link_to 'Edit', edit_article_path(article) %></td>        
+      <td><%= link_to 'Destroy', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    <% end %>
+        
+    </tr>          
+  <% end %>
+</table>
+<%= will_paginate @articles %>

@@ -43,5 +43,7 @@ $ rails s -b 0.0.0.0 -p 3000
 ```
 
 ## Revision history
-Aug 8, 2017: Add user following (completed all 14 chapters of Michael Hartl's tutorial - NO mail server)<br/>
-Aug 9, 2017: Organized CSS style<br/>
+* Aug 8, 2017: Add user following (completed all 14 chapters of Michael Hartl's tutorial - NO mail server)<br />
+* Aug 9, 2017: Organized CSS style<br />
+* Aug 14, 2017: Added Articles and Comments with sign up fearture. I took reference from materials on http://guides.rubyonrails.org/getting_started.html).
+> Please refer to the "My Blog" Menu on the top or or type: https://vast-mesa-46380.herokuapp.com/articles

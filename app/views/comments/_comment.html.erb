@@ -1,0 +1,18 @@
+<div class="post">            
+      <h2>Commenter: <%= comment.commenter %> (User_Id: <%= comment.user_id %>)</h2>
+      <hr>
+      <div class="in-content">
+        <p><%= comment.body %></p>
+      </div>
+    
+<p>
+    
+<% if logged_in? %>    
+  <% if comment.user_id == current_user.id %>    
+    <%= link_to 'Destroy Comment', [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+  <% end %>
+<% end %>    
+</p>    
+</div>
