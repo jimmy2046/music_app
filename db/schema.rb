@@ -12,31 +12,32 @@
 
 ActiveRecord::Schema.define(version: 20170814052759) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.index ["user_id", "created_at"], name: "index_articles_on_user_id_and_created_at"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
   create_table "comments", force: :cascade do |t|
     t.string "commenter"
     t.text "body"
-    t.integer "article_id"
+    t.bigint "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["article_id"], name: "index_comments_on_article_id"
-    t.index ["user_id", "created_at"], name: "index_comments_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "microposts", force: :cascade do |t|
     t.text "content"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "picture"
@@ -54,7 +55,7 @@ ActiveRecord::Schema.define(version: 20170814052759) do
     t.index ["follower_id"], name: "index_relationships_on_follower_id"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", id: :serial, force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.string "email"
@@ -66,4 +67,8 @@ ActiveRecord::Schema.define(version: 20170814052759) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "articles", "users"
+  add_foreign_key "comments", "articles"
+  add_foreign_key "comments", "users"
+  add_foreign_key "microposts", "users"
 end
