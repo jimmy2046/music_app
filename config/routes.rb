@@ -22,4 +22,7 @@ Rails.application.routes.draw do
     resources :comments
   end
     
+#  get '/newhome4',  to: 'static_pages#newhome4'
+  get '/tweet', to: 'static_pages#tweet'
+    
 end

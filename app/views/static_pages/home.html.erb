@@ -1,49 +1,46 @@
-<% if logged_in? %>
-  <div class="row">
-    <aside class="col-md-4">
-      <section class="user_info">
-        <%= render 'shared/user_info' %>
-      </section>
-      <section class="stats">
-        <%= render 'shared/stats' %>
-      </section>        
-      <section class="micropost_form">
-        <%= render 'shared/micropost_form' %>
-      </section>
-    </aside>
-    <div class="col-md-8">
-      <h3>Micropost Feed</h3>
-      <%= render 'shared/feed' %>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">Rendezvous</h1>
+        <h2>Pops Keyboard Scores</h2>
+        <p>This site provides pops keyboard scores that focus on the auto accompaniment feature in moden portable keyboards that suitable for beginners.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
     </div>
-</div>
-<% else %>
 
-    <!-- Header -->
-    <div id="wrapperHeader">    
-        <div id="header">
-            <%= image_tag("head-bg.jpg") %>
-        </div> 
-    </div>
-        
-	<!-- Content -->
-	<div class="content">
-		<div class="container">
-			<!-- Post -->
-			<div class="post">
-				<!-- Heading -->				
-                <h1>Welcome to the myapp2</h1>
-				<hr>
-				<div class="in-content">
-					<p>This is a Ruby on Rails website based on <a href = "https://www.railstutorial.org/book">Michael Hartl's Tutorial</a>.
-                        The production version is hosted by Heroku on: <a href ="https://vast-mesa-46380.herokuapp.com/"> https://vast-mesa-46380.herokuapp.com/</a>. The source code is hosted by Github on: <a href = "https://github.com/jimmy2046/myapp2">https://github.com/jimmy2046/myapp2</a>. The SendGrid mail server is disabled. Therefore, there are no account activation and password reset functions at this moment. </p>
-                    <%= link_to "Sign up now!", signup_path, class: "btn-yellow btn-lg btn-primary" %>
-                    
-				</div>
-            </div>
-			<!-- /post -->
-            
-		</div>
-	</div>
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Little Hans</h2>
+          <%= image_tag("treble_staff.png", alt: "Treble Staff", height: 100, width: 50, class: "align-center") %>
+          <ul>
+            <li>Song title: Little Hans</li>
+            <li>Composer: German children's song</li>
+            <li>Date published: Aug 23, 2017</li>
+          </ul>          
+          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Scarborough Fair</h2>
+          <%= image_tag("treble_staff.png", alt: "Treble Staff", height: 100, width: 50, class: "align-center") %>            
+          <ul>
+            <li>Song title: Scarborough Fair</li>
+            <li>Composer: English folk song</li>
+            <li>Date published: Aug 23, 2017</li>              
+          </ul>
+          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Amazing Grace</h2>
+          <%= image_tag("treble_staff.png", alt: "Treble Staff", height: 100, width: 50, class: "align-center") %>            
+          <ul>
+            <li>Song title: Amazing Grace</li>
+            <li>Composer:  John Newton</li>
+            <li>Date published: Aug 23, 2017 </li>
+          </ul>
+          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
 
-
-<% end %>
+      <hr>

@@ -1,0 +1,51 @@
+<% provide(:title, "Tweet") %>
+
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="stats">
+        <%= render 'shared/stats' %>
+      </section>        
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+</div>
+<% else %>
+
+    <!-- Header -->
+    <div id="wrapperHeader">    
+        <div id="header">
+            <%= image_tag("head-bg.jpg") %>
+        </div> 
+    </div>
+        
+	<!-- Content -->
+	<div class="content">
+		<div class="container">
+			<!-- Post -->
+			<div class="post">
+				<!-- Heading -->				
+                <h1>Welcome to the Music App</h1>
+				<hr>
+				<div class="in-content">
+					<p>This is a Ruby on Rails website based on <a href = "https://www.railstutorial.org/book">Michael Hartl's Tutorial</a>.
+                        The production version is hosted by Heroku on: <a href ="https://vast-mesa-46380.herokuapp.com/"> https://vast-mesa-46380.herokuapp.com/</a>. The source code is hosted by Github on: <a href = "https://github.com/jimmy2046/myapp2">https://github.com/jimmy2046/myapp2</a>. The SendGrid mail server is disabled. Therefore, there are no account activation and password reset functions at this moment. </p>
+                    <%= link_to "Sign up now!", signup_path, class: "btn-yellow btn-lg btn-primary" %>
+                    
+				</div>
+            </div>
+			<!-- /post -->
+            
+		</div>
+	</div>
+
+
+<% end %>

@@ -1,0 +1,22 @@
+/* jumbotron.css */
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+  padding-top: 3.5rem;
+}
+
+.jumbotron {
+  background-image: image-url('banner_keyboard.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+/* jimmy.scss */
+
+.navbar {
+  background-color:#0056b3;
+}
+
+img.align-center {
+    display: block;
+    margin: 0px auto;
+}

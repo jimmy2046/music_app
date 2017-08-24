@@ -3,7 +3,7 @@ require 'test_helper'
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
 
   def setup
-    @base_title = "Ruby on Rails Tutorial Sample App"
+    @base_title = "Music App"
   end
 
   test "should get root" do
@@ -14,7 +14,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
     get home_path
     assert_response :success
-    assert_select "title", "Ruby on Rails Tutorial Sample App"
+    assert_select "title", "Music App"
   end
 
   test "should get help" do
@@ -34,5 +34,17 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "title", "Contact | #{@base_title}"
   end
+
+  test "should get tweet" do
+    get tweet_path
+    assert_response :success
+    assert_select "title", "Tweet | #{@base_title}"
+  end    
+
+  test "should get blog" do
+    get articles_path
+    assert_response :success
+    assert_select "title", "My Blog | #{@base_title}"
+  end    
     
 end
