@@ -20,3 +20,4 @@ Music App provides:
 * Aug 23, 2017: Completed new CSS style for the homepage.
 * Aug 25, 2017: Added Scores controller and Score model (first draft)
 * Aug 26, 2017: Completed Scores model migration
+* Aug 26, 2017: Added Stripe Checkout

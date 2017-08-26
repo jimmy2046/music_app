@@ -24,5 +24,6 @@ Rails.application.routes.draw do
     
   get '/tweet', to: 'static_pages#tweet'
   resources :scores    
+  resources :charges
     
 end

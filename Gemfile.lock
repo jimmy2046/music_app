@@ -70,6 +70,8 @@ GEM
     execjs (2.7.0)
     faker (1.7.3)
       i18n (~> 0.5)
+    faraday (0.13.1)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
@@ -257,6 +259,7 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     multi_json (1.12.1)
+    multipart-post (2.0.0)
     nenv (0.3.0)
     nio4r (2.1.0)
     nokogiri (1.8.0)
@@ -335,6 +338,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stripe (3.3.1)
+      faraday (~> 0.9)
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -383,6 +388,7 @@ DEPENDENCIES
   sass-rails (= 5.0.6)
   spring (= 2.0.2)
   spring-watcher-listen (= 2.0.1)
+  stripe
   turbolinks (= 5.0.1)
   tzinfo-data
   uglifier (= 3.2.0)

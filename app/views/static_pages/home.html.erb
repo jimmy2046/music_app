@@ -4,7 +4,9 @@
         <h1 class="display-3">Rendezvous</h1>
         <h2>Pops Keyboard Scores</h2>
         <p>This site provides pops keyboard scores that focus on the auto accompaniment feature in moden portable keyboards that suitable for beginners.</p>
-        <p><%= link_to "Sign up now!", signup_path, class: "btn btn-primary btn-lg" %></p>
+        <% if !logged_in? %>  
+          <p><%= link_to "Sign up now!", signup_path, class: "btn btn-primary btn-lg" %></p>
+        <% end %> 
       </div>
     </div>
 

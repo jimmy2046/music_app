@@ -18,7 +18,9 @@
       </p>
       <p>
         <% if !logged_in? %>
-          <a class="btn btn-primary btn-lg" href="#" role="button">Login to buy</a>
+          <%= link_to("Login to buy", login_path, class: "btn btn-primary btn-lg", role: "button") %>
+        <% else %>
+          <%= link_to 'Testing Buy', new_charge_path(:score_id => @score.id), class: "btn btn-primary", role: "button" %>          
         <% end %>
       </p>
       <h1 class="warning">Website under test. Please do not buy now.</h1>
