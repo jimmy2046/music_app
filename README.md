@@ -11,6 +11,7 @@ Music App provides:
 * User can sign up
 * User can sign in
 * User can upload a score
+* Admin can add a new score
 
 ## Revision history
 * Aug 23, 2017: Completed new CSS style for the homepage.

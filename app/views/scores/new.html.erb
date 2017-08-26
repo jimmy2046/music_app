@@ -1,0 +1,36 @@
+<% provide(:title, "Add a new score") %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        
+    <h2>Add a new score</h2>
+
+    <%= form_for :score, url: scores_path do |f| %>        
+      <p>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </p>
+
+      <p>
+        <%= f.label :artist %>
+        <%= f.text_field :artist %>
+      </p>
+
+      <p>
+        <%= f.label :score_jpg %>
+        <%= f.text_field :score_jpg %>
+      </p>
+
+      <p>
+        <%= f.label :price %>
+        <%= f.text_field :price %>
+      </p>        
+        
+      <p>
+        <%= f.submit "Add", class: "btn-primary" %>
+      </p>
+     <% end %>                
+    </div>
+  </div>
+</div>

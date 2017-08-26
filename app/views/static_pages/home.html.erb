@@ -4,7 +4,25 @@
         <h1 class="display-3">Rendezvous</h1>
         <h2>Pops Keyboard Scores</h2>
         <p>This site provides pops keyboard scores that focus on the auto accompaniment feature in moden portable keyboards that suitable for beginners.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <p><%= link_to "Sign up now!", signup_path, class: "btn btn-primary btn-lg" %></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">        
+        <% @scores.each do |score| %>
+          <div class="col-md-4">
+            <h2><%= score.title %> </h2>
+              <%= image_tag("treble_staff.png", alt: "Treble Staff", height: 100, width: 50, class: "align-center") %>
+            <ul>
+              <li>Song title: <%= score.title %></li>
+              <li>Artist: <%= score.artist %></li>
+              <li>Date published: <%= score.created_at.in_time_zone('Pacific Time (US & Canada)').to_date %></li>
+            </ul>
+            <p><%= link_to 'View details', score_path(score), class: "btn btn-primary", role: "button" %> </p>
+          </div>
+        <% end %>
       </div>
     </div>
 
@@ -12,35 +30,13 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
-          <h2>Little Hans</h2>
-          <%= image_tag("treble_staff.png", alt: "Treble Staff", height: 100, width: 50, class: "align-center") %>
-          <ul>
-            <li>Song title: Little Hans</li>
-            <li>Composer: German children's song</li>
-            <li>Date published: Aug 23, 2017</li>
-          </ul>          
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Scarborough Fair</h2>
-          <%= image_tag("treble_staff.png", alt: "Treble Staff", height: 100, width: 50, class: "align-center") %>            
-          <ul>
-            <li>Song title: Scarborough Fair</li>
-            <li>Composer: English folk song</li>
-            <li>Date published: Aug 23, 2017</li>              
-          </ul>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Amazing Grace</h2>
-          <%= image_tag("treble_staff.png", alt: "Treble Staff", height: 100, width: 50, class: "align-center") %>            
-          <ul>
-            <li>Song title: Amazing Grace</li>
-            <li>Composer:  John Newton</li>
-            <li>Date published: Aug 23, 2017 </li>
-          </ul>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+            <p>
+              Add a new score (admin only):
+              <% if logged_in? && current_user.admin? %>
+                <%= link_to 'Add a new score', new_score_path, class: "btn btn-danger", role: "button" %>
+              <% end %>
+            </p>
         </div>
       </div>
-
+    </div>
       <hr>

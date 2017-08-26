@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Listing scores</h2>
+ 
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Title</th>
+              <th>Artist</th>
+              <th>Price</th>
+            </tr>              
+          </thead>
+          <tbody>              
+          <% @scores.each do |score| %>
+            <tr>
+              <td><%= score.title %></td>
+              <td><%= score.artist %></td>
+              <td><%= score.price %></td>              
+              <td><%= link_to 'Show', score_path(score) %></td>
+            </tr>
+          <% end %>              
+          </tbody>            
+        </table>
+      </div>                  
+    </div>
+  </div>
+</div>

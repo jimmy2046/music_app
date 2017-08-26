@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <%= image_tag(@score.score_jpg, alt: "Score in JPG", class: "img_score_jpg") %>
+    </div> <!-- end of class col-md-6 -->
+    <div class="col-md-6">        
+      <h2>Title</h2>
+      <p>        
+        <%= @score.title %>
+      </p>      
+      <h2>Artist</h2>
+      <p>
+        <%= @score.artist %>
+      </p>
+      <h2>Price</h2>  
+      <p>
+        $<%= @score.price %>
+      </p>
+      <p>
+        <% if !logged_in? %>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Login to buy</a>
+        <% end %>
+      </p>
+      <h1 class="warning">Website under test. Please do not buy now.</h1>
+      <p>
+        <%= link_to 'Return to Home', root_path, class: "btn btn-secondary", role: "button" %>
+      </p>
+    </div> <!-- end of class col-md-6 -->  
+  </div> <!-- end of class row -->
+</div> <!-- end of class container -->

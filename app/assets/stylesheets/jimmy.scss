@@ -1,7 +1,8 @@
 /* jumbotron.css */
 /* Move down content because we have a fixed navbar that is 3.5rem tall */
 body {
-  padding-top: 3.5rem;
+/*  padding-top: 3.5rem; */
+  padding-top: 6.5rem;
 }
 
 .jumbotron {
@@ -19,4 +20,18 @@ body {
 img.align-center {
     display: block;
     margin: 0px auto;
+}
+
+.warning {
+  color: red;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+/* Score image fits the grid/container */
+.img_score_jpg {
+    max-height: 100%;
+    max-width: 100%;    
 }
