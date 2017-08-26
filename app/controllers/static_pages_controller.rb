@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
     
   def home
-    @scores = Score.all
+    @scores = Score.all.order('created_at')
   end
 
   def help

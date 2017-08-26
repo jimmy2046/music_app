@@ -19,10 +19,10 @@ def create
   @score.save
   redirect_to @score
 end
- 
+    
 private
   def score_params
-    params.require(:score).permit(:title, :artist, :score_jpg, :price)
+    params.require(:score).permit(:title, :artist, :cover, :price)
   end    
 
     def user_params

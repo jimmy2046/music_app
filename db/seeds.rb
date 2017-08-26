@@ -39,3 +39,24 @@ users = User.order(:created_at).take(6)
   text = Faker::Lorem.sentence(10)
   users.each { |user| user.articles.create!(title: title, text: text) }
 end
+
+# Scores
+Score.create(title: "Lightly Row",
+             artist: "German Children's Song",
+             price: "2.99",
+             cover: "covers/lightly_row.JPG")
+
+Score.create(title: "Scarborough Fair",
+            artist: "English Folk Song",
+            price: "4.99",
+            cover: "covers/scarborough_fair.JPG")
+
+Score.create(title: "Amazing Grace",
+             artist: "John Newton",
+             price: "5.99",
+             cover: "covers/amazing_grace.JPG")
+
+Score.create(title: "Ode to Joy",
+             artist: "Beethoven",
+             price: "4.99",
+             cover: "covers/ode_to_joy.JPG")
